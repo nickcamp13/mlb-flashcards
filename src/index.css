@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -23,11 +27,24 @@ a:hover {
 }
 
 body {
+  position: relative;
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+body:before {
+  background: url(./assets/background.jpg) no-repeat center/110%;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.25; /* Adjust the opacity as needed */
+  z-index: -1;
 }
 
 h1 {

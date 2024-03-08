@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Flashcards from "./components/Flashcard";
+import Flashcards from "./components/Flashcards";
 import flashcards from "./flashcards";
 import "./App.css";
 
@@ -7,7 +7,7 @@ function App() {
   const [cards, setCards] = useState(flashcards);
 
   return (
-    <div>
+    <div className="App">
       <h1>MLB All-Star Quiz</h1>
       <h2>
         Test your baseball knowledge from rules of the game to historical player

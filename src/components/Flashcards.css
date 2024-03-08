@@ -1,0 +1,33 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  color: black;
+  min-height: 20rem;
+  min-width: 50rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 4px black;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.card:hover{
+  cursor: pointer;
+}
+
+.history {
+  background-color: #669bbc;
+}
+.rules {
+  background-color: #c1121f;
+}
+
+#flip {
+  font-size: 0.8em;
+}
+
+button {
+  margin-top: 0.75rem;
+}
