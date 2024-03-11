@@ -1,5 +1,6 @@
 const flashcards = [
   {
+    index: 0,
     category: "history",
     imgUrl: "",
     question: "How many innings did the longest game in MLB history last?",
@@ -7,6 +8,7 @@ const flashcards = [
       "33!!!! In 1981, the Pawtucket Red Sox and the Rochester Red Wings competed. It took 8 hours and 25 minutes to resolve!",
   },
   {
+    index: 1,
     category: "history",
     imgUrl: "https://www.baseball-reference.com/req/202402130/images/headshots/b/bb9e2490_sabr.jpg",
     question:
@@ -15,6 +17,7 @@ const flashcards = [
       "Jackie Robinson. He faced incredible challenges but paved the way for generations of players.",
   },
   {
+    index: 2,
     category: "history",
     imgUrl: "https://cdn.ssref.net/req/202312151/tlogo/br/HOU.png",
     question:
@@ -22,6 +25,7 @@ const flashcards = [
     answer: "The Houston Astros",
   },
   {
+    index: 3,
     category: "history",
     imgUrl: "",
     question: "How many perfect games have been recorded in MLB history?",
@@ -29,6 +33,7 @@ const flashcards = [
       "Only 23! A perfect game is one where a single pitcher pitches a complete game (9 innings) without allowing a single batter to reach base by hit, walk, or error. They are incredibly rare!",
   },
   {
+    index: 4,
     category: "history",
     imgUrl: "https://cdn.ssref.net/req/202312151/tlogo/br/NYY.png",
     question:
@@ -36,6 +41,7 @@ const flashcards = [
     answer: "The New York Yankees. 27 titles.",
   },
   {
+    index: 5,
     category: "rules",
     imgUrl: "",
     question:
@@ -43,6 +49,7 @@ const flashcards = [
     answer: "A 'balk'",
   },
   {
+    index: 6,
     category: "rules",
     imgUrl: "",
     question:
@@ -50,6 +57,7 @@ const flashcards = [
     answer: "True",
   },
   {
+    index: 7, 
     category: "rules",
     imgUrl: "",
     question:
@@ -57,6 +65,7 @@ const flashcards = [
     answer: "A 'check swing'",
   },
   {
+    index: 8,
     category: "rules",
     imgUrl: "",
     question:
@@ -64,6 +73,7 @@ const flashcards = [
     answer: "False",
   },
   {
+    index: 9,
     category: "rules",
     imgUrl: "https://3.bp.blogspot.com/-LWeYQIF8JmI/UmnlYE6aDiI/AAAAAAAAALY/h9P--D2VLtQ/s400/american-league-logo1.jpg",
     question: "The MLB is comprised of two leagues. What are their names?",

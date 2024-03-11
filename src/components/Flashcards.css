@@ -1,3 +1,8 @@
+.component {
+  display: flex;
+  flex-direction: column;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -30,4 +35,8 @@
 
 button {
   margin-top: 0.75rem;
+}
+
+.user-input p {
+  display: inline;
 }
