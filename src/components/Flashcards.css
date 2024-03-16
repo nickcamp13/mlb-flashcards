@@ -37,6 +37,42 @@ button {
   margin-top: 0.75rem;
 }
 
+.user-input {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
 .user-input p {
   display: inline;
+  align-content: center;
+  margin: 0;
+}
+
+input {
+  height: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.blocked {
+  color: gray;
+  cursor: default;
+}
+
+.blocked:hover {
+  border-color: red;
+}
+
+.right {
+  border: 2px green solid;
+}
+
+.wrong {
+  border: 2px red solid;
 }

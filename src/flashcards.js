@@ -5,7 +5,7 @@ const flashcards = [
     imgUrl: "",
     question: "How many innings did the longest game in MLB history last?",
     answer:
-      "33!!!! In 1981, the Pawtucket Red Sox and the Rochester Red Wings competed. It took 8 hours and 25 minutes to resolve!",
+      "33",
   },
   {
     index: 1,
@@ -14,7 +14,7 @@ const flashcards = [
     question:
       "Who was the first African American player in modern MLB history when he joined the Brooklyn Dodgers?",
     answer:
-      "Jackie Robinson. He faced incredible challenges but paved the way for generations of players.",
+      "Jackie Robinson",
   },
   {
     index: 2,
@@ -30,15 +30,15 @@ const flashcards = [
     imgUrl: "",
     question: "How many perfect games have been recorded in MLB history?",
     answer:
-      "Only 23! A perfect game is one where a single pitcher pitches a complete game (9 innings) without allowing a single batter to reach base by hit, walk, or error. They are incredibly rare!",
+      "Only 23! They are incredibly rare!",
   },
   {
     index: 4,
     category: "history",
     imgUrl: "https://cdn.ssref.net/req/202312151/tlogo/br/NYY.png",
     question:
-      "Which team holds the record for most World Series titles? Bonus question: how many titles?",
-    answer: "The New York Yankees. 27 titles.",
+      "Which team holds the record for most World Series titles?",
+    answer: "The New York Yankees (27 titles).",
   },
   {
     index: 5,

@@ -5,10 +5,15 @@
   text-align: center;
 }
 
-
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#streaks {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }

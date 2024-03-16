@@ -4,22 +4,22 @@ Submitted by: **Nicholas Campos**
 
 This web app: **Test your skills with a quiz on rules and history of the MLB**
 
-Time spent: **X** hours spent in total
+Time spent: **8** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **The user can enter their guess in a box before seeing the flipside of the card**
-- [ ] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
-- [ ] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
-- [ ] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
+- [x] **The user can enter their guess in a box before seeing the flipside of the card**
+- [x] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [x] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [x] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
-- [ ] A shuffle button is used to randomize the order of the cards
+- [x] A shuffle button is used to randomize the order of the cards
 - [ ] A user's answer may be counted as correct even when it is slightly different from the target answer
-- [ ] A counter displays the user's current and longest streak of correct responses
+- [x] A counter displays the user's current and longest streak of correct responses
 - [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 The following **additional** features are implemented:
@@ -30,7 +30,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXd4ejZvb3lxMGwyemFncnkzcXU2dHZseXQ0Y2NjNWtmYWtmZ2kzdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ScUU6xlPIhAxJi0yIH/giphy.gif)
+![Video Walkthrough](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3o3c2l2MDVpN3dtNmh1bzlub29objJicTUxMzQ1ZTZpdXQ4ZjI3ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Zp5hH82dF3z2bPJntP/giphy.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with [Kap](https://getkap.co/) for macOS

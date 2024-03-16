@@ -1,8 +1,14 @@
 import { useState } from "react";
 import "./Flashcards.css";
 
-const Flashcards = ({ cards, shuffleCards }) => {
+const Flashcards = ({
+  cards,
+  shuffleCards,
+  updateStreak,
+  updateLongestStreak,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(-1);
+  const [seenCards, setSeenCards] = useState([-1]);
 
   const [currentCard, setCard] = useState({
     question: "Play ball!",
@@ -10,31 +16,50 @@ const Flashcards = ({ cards, shuffleCards }) => {
   });
   const [isFlipped, setIsFlipped] = useState(false);
 
-  const [userAnswer, setUserAnswer] = useState('');
+  const [userAnswer, setUserAnswer] = useState("");
+  const [answerSubmitted, setAnswerSubmitted] = useState(false);
 
+  const resetInput = () => {
+    const input = document.getElementById("userAnswer")
+    setUserAnswer("");
+    input.value = "";
+    input.className = "";
+  }
+
+  // reset the entire quiz, all states should revert to their initial values
   const resetCards = () => {
     setCard(cards[0]);
     setCurrentIndex(0);
-  }
+    setSeenCards([-1]);
+    setIsFlipped(false);
+    setAnswerSubmitted(false);
+    updateStreak(false);
+    updateLongestStreak(0);
+    resetInput();
+  };
 
-  const getNextCard = () => {
-    setCurrentIndex(currentIndex + 1);
-    setCard(cards[currentIndex + 1]);
-  }
 
+  // Only use in the case where it makes sense to get the previous card
   const getPreviousCard = () => {
     setCurrentIndex(currentIndex - 1);
     setCard(cards[currentIndex - 1]);
-  }
-
-  const handleFlip = () => {
-    setIsFlipped(!isFlipped);
+    setIsFlipped(false);
+    setAnswerSubmitted(false);
+    resetInput();
   };
 
+  // Only use in the case where it makes sense to get the next card
+  const getNextCard = () => {
+    setCurrentIndex(currentIndex + 1);
+    setCard(cards[currentIndex + 1]);
+    setAnswerSubmitted(false);
+    resetInput();
+  };
+
+  // Logic for advancing through the deck of cards
   const handleNextCard = () => {
-    if(currentIndex === -1) {
+    if (currentIndex === -1) {
       resetCards();
-      setIsFlipped(false);
     } else {
       if (currentIndex < cards.length - 1) {
         getNextCard();
@@ -43,25 +68,46 @@ const Flashcards = ({ cards, shuffleCards }) => {
     }
   };
 
+  // Logic for retreating through the deck of cards
   const handlePreviousCard = () => {
-    if(currentIndex > 0 && currentIndex < cards.length) {
+    if (currentIndex > 0 && currentIndex < cards.length) {
       getPreviousCard();
     }
-  }
+  };
+
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
+    if (!seenCards.includes(currentIndex)) {
+      seenCards.push(currentIndex);
+    }
+  };
 
   const handleInput = (e) => {
-    setUserAnswer(e.target.value)
-  }
+    setUserAnswer(e.target.value);
+  };
 
   const handleShuffle = () => {
     shuffleCards(cards);
     resetCards();
-    setIsFlipped(false);
-  }
+  };
 
   const handleSubmit = () => {
-
-  }
+    const input = document.getElementById("userAnswer")
+    if (
+      currentCard["answer"]
+        .toLocaleLowerCase()
+        .includes(userAnswer.toLocaleLowerCase())
+    ) {
+      updateStreak(true);
+      updateLongestStreak();
+      input.classList.add("right");
+    } else {
+      updateStreak(false);
+      input.classList.add("wrong");
+    }
+    handleFlip();
+    setAnswerSubmitted(true);
+  };
 
   return (
     <div className="component">
@@ -78,12 +124,35 @@ const Flashcards = ({ cards, shuffleCards }) => {
       </div>
       <div className="user-input">
         <p>Enter your answer here: </p>
-        <input type="text" name="userAnswer" id="" value={userAnswer} onChange={handleInput}/>
-        <button onClick={handleSubmit}>Submit Answer</button>
+        <input
+          type="text"
+          name="userAnswer"
+          id="userAnswer"
+          value={userAnswer}
+          onChange={handleInput}
+          disabled={seenCards.includes(currentIndex) || answerSubmitted}
+        />
+        <button
+          className={userAnswer === "" ? "blocked" : ""}
+          onClick={handleSubmit}
+          disabled={answerSubmitted}
+        >
+          Submit Answer
+        </button>
       </div>
       <div className="buttons">
-        <button onClick={handlePreviousCard}>Previous</button>
-        <button onClick={handleNextCard}>Next</button>
+        <button
+          className={currentIndex <= 0 ? "blocked" : ""}
+          onClick={handlePreviousCard}
+        >
+          Previous
+        </button>
+        <button
+          className={currentIndex >= cards.length - 1 ? "blocked" : ""}
+          onClick={handleNextCard}
+        >
+          Next
+        </button>
         <button onClick={handleShuffle}>Shuffle Cards</button>
       </div>
     </div>
