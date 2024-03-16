@@ -28,16 +28,9 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented user stories (Click on the image to go to the video):
 
-![Video Walkthrough](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3o3c2l2MDVpN3dtNmh1bzlub29objJicTUxMzQ1ZTZpdXQ4ZjI3ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Zp5hH82dF3z2bPJntP/giphy.gif)
-
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with [Kap](https://getkap.co/) for macOS
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+[![video thumbnail](./public/video-thumbnail.png)](https://youtu.be/axzdwKWv1zE?si=_KfXOAtZRlqMw0si)
 
 ## Notes
 
